@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TraderPro | Guía de Trading Profesional</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <span class="logo-icon">◈</span>
+    <span class="logo-text">TRADER<span class="accent">PRO</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#velas">Velas</a></li>
+    <li><a href="#patrones">Patrones</a></li>
+    <li><a href="#estructura">Estructura</a></li>
+    <li><a href="#smc">SMC</a></li>
+    <li><a href="#glosario">Glosario</a></li>
+  </ul>
+  <div class="ticker-mini">
+    <span class="green">BTC ▲ 2.4%</span> &nbsp;
+    <span class="red">ETH ▼ 0.8%</span> &nbsp;
+    <span class="green">EUR/USD ▲ 0.1%</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="scanlines"></div>
+  <div class="hero-content">
+    <div class="hero-badge">GUÍA COMPLETA 2024</div>
+    <h1 class="hero-title">Domina el<br/><span class="accent-glow">Lenguaje</span><br/>del Mercado</h1>
+    <p class="hero-sub">Todo lo que necesitas para hablar como trader profesional: velas japonesas, estructura de mercado, BOS, ChoCH, zonas de liquidez y más.</p>
+    <div class="hero-cta">
+      <a href="#intro" class="btn-primary">Comenzar Ahora</a>
+      <a href="#glosario" class="btn-ghost">Ver Glosario</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">12+</span><span class="stat-lbl">Conceptos</span></div>
+      <div class="stat"><span class="stat-num">40+</span><span class="stat-lbl">Patrones</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Visual</span></div>
+    </div>
+  </div>
+  <div class="hero-chart">
+    <svg viewBox="0 0 500 300" class="chart-svg">
+      <!-- Grid lines -->
+      <line x1="0" y1="60" x2="500" y2="60" stroke="#1a2a1a" stroke-width="1"/>
+      <line x1="0" y1="120" x2="500" y2="120" stroke="#1a2a1a" stroke-width="1"/>
+      <line x1="0" y1="180" x2="500" y2="180" stroke="#1a2a1a" stroke-width="1"/>
+      <line x1="0" y1="240" x2="500" y2="240" stroke="#1a2a1a" stroke-width="1"/>
+      <!-- Area -->
+      <path d="M0,240 L40,210 L80,220 L120,180 L160,190 L200,140 L240,150 L280,100 L320,110 L360,70 L400,80 L440,50 L480,60 L500,40 L500,300 L0,300 Z" fill="url(#areaGrad)" opacity="0.3"/>
+      <!-- Line -->
+      <path d="M0,240 L40,210 L80,220 L120,180 L160,190 L200,140 L240,150 L280,100 L320,110 L360,70 L400,80 L440,50 L480,60 L500,40" fill="none" stroke="#00ff88" stroke-width="2"/>
+      <!-- Candles -->
+      <rect x="30" y="200" width="16" height="30" fill="#00ff88" rx="1"/>
+      <line x1="38" y1="196" x2="38" y2="235" stroke="#00ff88" stroke-width="1.5"/>
+      <rect x="70" y="215" width="16" height="15" fill="#ff3355" rx="1"/>
+      <line x1="78" y1="210" x2="78" y2="235" stroke="#ff3355" stroke-width="1.5"/>
+      <rect x="110" y="170" width="16" height="25" fill="#00ff88" rx="1"/>
+      <line x1="118" y1="165" x2="118" y2="200" stroke="#00ff88" stroke-width="1.5"/>
+      <rect x="150" y="182" width="16" height="18" fill="#ff3355" rx="1"/>
+      <line x1="158" y1="177" x2="158" y2="205" stroke="#ff3355" stroke-width="1.5"/>
+      <rect x="190" y="128" width="16" height="28" fill="#00ff88" rx="1"/>
+      <line x1="198" y1="122" x2="198" y2="162" stroke="#00ff88" stroke-width="1.5"/>
+      <rect x="230" y="140" width="16" height="20" fill="#ff3355" rx="1"/>
+      <line x1="238" y1="134" x2="238" y2="165" stroke="#ff3355" stroke-width="1.5"/>
+      <rect x="270" y="88" width="16" height="25" fill="#00ff88" rx="1"/>
+      <line x1="278" y1="82" x2="278" y2="118" stroke="#00ff88" stroke-width="1.5"/>
+      <rect x="310" y="95" width="16" height="22" fill="#ff3355" rx="1"/>
+      <line x1="318" y1="90" x2="318" y2="122" stroke="#ff3355" stroke-width="1.5"/>
+      <rect x="350" y="58" width="16" height="28" fill="#00ff88" rx="1"/>
+      <line x1="358" y1="52" x2="358" y2="92" stroke="#00ff88" stroke-width="1.5"/>
+      <rect x="390" y="68" width="16" height="20" fill="#ff3355" rx="1"/>
+      <line x1="398" y1="63" x2="398" y2="92" stroke="#ff3355" stroke-width="1.5"/>
+      <rect x="430" y="38" width="16" height="28" fill="#00ff88" rx="1"/>
+      <line x1="438" y1="32" x2="438" y2="72" stroke="#00ff88" stroke-width="1.5"/>
+      <defs>
+        <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#00ff88"/>
+          <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section id="intro" class="section">
+  <div class="container">
+    <div class="section-label">01 — FUNDAMENTOS</div>
+    <h2 class="section-title">¿Qué es el <span class="accent">Trading?</span></h2>
+    <div class="intro-grid">
+      <div class="intro-card">
+        <div class="card-icon">📈</div>
+        <h3>Trading</h3>
+        <p>Es la compra y venta de activos financieros (acciones, divisas, criptomonedas, materias primas) con el objetivo de obtener ganancia de la diferencia entre el precio de compra y venta.</p>
+      </div>
+      <div class="intro-card">
+        <div class="card-icon">⚡</div>
+        <h3>Timeframes</h3>
+        <p>El tiempo que representa cada vela en el gráfico. Los más usados: <strong>1M, 5M, 15M</strong> (scalping) · <strong>1H, 4H</strong> (swing) · <strong>D, W</strong> (posicional). Siempre analizar del mayor al menor.</p>
+      </div>
+      <div class="intro-card">
+        <div class="card-icon">💹</div>
+        <h3>Tipos de Mercado</h3>
+        <p><strong>Forex:</strong> Divisas (EUR/USD, GBP/JPY) · <strong>Crypto:</strong> BTC, ETH · <strong>Acciones:</strong> AAPL, TSLA · <strong>Índices:</strong> SP500, NAS100 · <strong>Commodities:</strong> Oro, Petróleo</p>
+      </div>
+      <div class="intro-card">
+        <div class="card-icon">🎯</div>
+        <h3>Bias del Mercado</h3>
+        <p>Es la dirección predominante del mercado. <span class="green">Bullish (alcista)</span> cuando el precio hace máximos y mínimos más altos. <span class="red">Bearish (bajista)</span> cuando hace máximos y mínimos más bajos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VELAS JAPONESAS -->
+<section id="velas" class="section dark-section">
+  <div class="container">
+    <div class="section-label">02 — VELAS JAPONESAS</div>
+    <h2 class="section-title">Anatomía de las <span class="accent">Velas</span></h2>
+    <p class="section-desc">Las velas japonesas son la representación gráfica del precio en un período determinado. Cada vela tiene 4 datos clave: apertura, cierre, máximo y mínimo.</p>
+
+    <div class="candle-anatomy">
+      <div class="anatomy-chart">
+        <svg viewBox="0 0 300 400" class="anatomy-svg">
+          <!-- Vela alcista -->
+          <g transform="translate(50,20)">
+            <!-- Sombra superior -->
+            <line x1="50" y1="10" x2="50" y2="60" stroke="#00ff88" stroke-width="2"/>
+            <!-- Cuerpo -->
+            <rect x="20" y="60" width="60" height="140" fill="#00ff88" rx="2"/>
+            <!-- Sombra inferior -->
+            <line x1="50" y1="200" x2="50" y2="260" stroke="#00ff88" stroke-width="2"/>
+            <!-- Labels -->
+            <text x="90" y="15" fill="#888" font-size="12" font-family="Share Tech Mono">MÁXIMO (HIGH)</text>
+            <line x1="80" y1="12" x2="90" y2="12" stroke="#888" stroke-width="1"/>
+            <text x="90" y="65" fill="#00ff88" font-size="12" font-family="Share Tech Mono">CIERRE (CLOSE)</text>
+            <line x1="80" y1="62" x2="90" y2="62" stroke="#00ff88" stroke-width="1"/>
+            <text x="90" y="200" fill="#00ff88" font-size="12" font-family="Share Tech Mono">APERTURA (OPEN)</text>
+            <line x1="80" y1="197" x2="90" y2="197" stroke="#00ff88" stroke-width="1"/>
+            <text x="90" y="258" fill="#888" font-size="12" font-family="Share Tech Mono">MÍNIMO (LOW)</text>
+            <line x1="80" y1="255" x2="90" y2="255" stroke="#888" stroke-width="1"/>
+            <!-- Badge alcista -->
+            <rect x="10" y="270" width="80" height="28" fill="#00ff8822" rx="4" stroke="#00ff88" stroke-width="1"/>
+            <text x="50" y="289" fill="#00ff88" font-size="13" font-family="Rajdhani" font-weight="700" text-anchor="middle">ALCISTA (BULL)</text>
+          </g>
+          <!-- Vela bajista -->
+          <g transform="translate(180,20)">
+            <line x1="50" y1="10" x2="50" y2="60" stroke="#ff3355" stroke-width="2"/>
+            <rect x="20" y="60" width="60" height="140" fill="#ff3355" rx="2"/>
+            <line x1="50" y1="200" x2="50" y2="260" stroke="#ff3355" stroke-width="2"/>
+            <rect x="10" y="270" width="80" height="28" fill="#ff335522" rx="4" stroke="#ff3355" stroke-width="1"/>
+            <text x="50" y="289" fill="#ff3355" font-size="13" font-family="Rajdhani" font-weight="700" text-anchor="middle">BAJISTA (BEAR)</text>
+          </g>
+        </svg>
+      </div>
+      <div class="anatomy-info">
+        <div class="info-item">
+          <span class="info-icon green">▲</span>
+          <div>
+            <h4>Vela Alcista (Bullish)</h4>
+            <p>El precio cerró <strong>más alto</strong> que abrió. Suele ser verde o blanca. Indica presión compradora dominante en ese período.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon red">▼</span>
+          <div>
+            <h4>Vela Bajista (Bearish)</h4>
+            <p>El precio cerró <strong>más bajo</strong> que abrió. Suele ser roja o negra. Indica presión vendedora dominante en ese período.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon" style="color:#fff">—</span>
+          <div>
+            <h4>Sombras / Mechas (Wicks)</h4>
+            <p>Líneas finas que salen del cuerpo. Representan el máximo y mínimo alcanzado. Sombras largas = rechazo del precio.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon" style="color:#ffd700">■</span>
+          <div>
+            <h4>Cuerpo (Body)</h4>
+            <p>La distancia entre apertura y cierre. Cuerpo grande = movimiento fuerte. Cuerpo pequeño = indecisión.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATRONES DE VELAS -->
+<section id="patrones" class="section">
+  <div class="container">
+    <div class="section-label">03 — PATRONES</div>
+    <h2 class="section-title">Patrones de <span class="accent">Velas Clave</span></h2>
+    <p class="section-desc">Estos son los patrones más importantes que debe reconocer cualquier trader. Aprende a identificarlos y entender lo que el mercado te está diciendo.</p>
+
+    <div class="patterns-grid">
+
+      <!-- DOJI -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <line x1="50" y1="10" x2="50" y2="90" stroke="#aaa" stroke-width="1.5"/>
+            <rect x="35" y="48" width="30" height="4" fill="#aaa" rx="1"/>
+            <rect x="35" y="46" width="30" height="8" fill="none" stroke="#aaa" stroke-width="1.5" rx="1"/>
+            <text x="50" y="110" fill="#888" font-size="9" text-anchor="middle" font-family="Share Tech Mono">DOJI</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Doji</h4>
+          <span class="pattern-tag neutral">Indecisión</span>
+          <p>Apertura y cierre casi iguales. El mercado está en equilibrio. Señal de posible reversión cuando aparece en zona clave.</p>
+          <div class="pattern-tip">💡 Poderoso en zonas de soporte/resistencia</div>
+        </div>
+      </div>
+
+      <!-- HAMMER -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <line x1="50" y1="10" x2="50" y2="35" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="35" y="35" width="30" height="25" fill="#00ff88" rx="2"/>
+            <line x1="50" y1="60" x2="50" y2="95" stroke="#00ff88" stroke-width="1.5"/>
+            <text x="50" y="110" fill="#00ff88" font-size="9" text-anchor="middle" font-family="Share Tech Mono">HAMMER</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Hammer / Martillo</h4>
+          <span class="pattern-tag bullish">Reversión Alcista</span>
+          <p>Mecha inferior larga (2x el cuerpo). Los vendedores empujaron el precio abajo pero los compradores recuperaron el control. Señal bullish.</p>
+          <div class="pattern-tip">💡 Confirmar con vela alcista siguiente</div>
+        </div>
+      </div>
+
+      <!-- SHOOTING STAR -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <line x1="50" y1="10" x2="50" y2="45" stroke="#ff3355" stroke-width="1.5"/>
+            <rect x="35" y="45" width="30" height="25" fill="#ff3355" rx="2"/>
+            <line x1="50" y1="70" x2="50" y2="85" stroke="#ff3355" stroke-width="1.5"/>
+            <text x="50" y="110" fill="#ff3355" font-size="9" text-anchor="middle" font-family="Share Tech Mono">SHOOTING STAR</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Shooting Star / Estrella Fugaz</h4>
+          <span class="pattern-tag bearish">Reversión Bajista</span>
+          <p>Mecha superior larga. Los compradores intentaron subir pero los vendedores rechazaron. Señal bearish fuerte en resistencia.</p>
+          <div class="pattern-tip">💡 Buscar en zonas de resistencia / supply</div>
+        </div>
+      </div>
+
+      <!-- ENGULFING BULLISH -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <rect x="28" y="45" width="20" height="40" fill="#ff3355" rx="1"/>
+            <line x1="38" y1="38" x2="38" y2="90" stroke="#ff3355" stroke-width="1.5"/>
+            <rect x="50" y="35" width="24" height="55" fill="#00ff88" rx="1"/>
+            <line x1="62" y1="28" x2="62" y2="95" stroke="#00ff88" stroke-width="1.5"/>
+            <text x="50" y="112" fill="#00ff88" font-size="8" text-anchor="middle" font-family="Share Tech Mono">BULL ENGULFING</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Bullish Engulfing</h4>
+          <span class="pattern-tag bullish">Reversión Alcista</span>
+          <p>Vela alcista que "engulfe" completamente la vela bajista anterior. Señal muy fuerte de reversión. Más poderosa en soportes.</p>
+          <div class="pattern-tip">💡 Uno de los patrones más confiables</div>
+        </div>
+      </div>
+
+      <!-- ENGULFING BEARISH -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <rect x="28" y="35" width="20" height="45" fill="#00ff88" rx="1"/>
+            <line x1="38" y1="28" x2="38" y2="86" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="50" y="28" width="24" height="60" fill="#ff3355" rx="1"/>
+            <line x1="62" y1="20" x2="62" y2="95" stroke="#ff3355" stroke-width="1.5"/>
+            <text x="50" y="112" fill="#ff3355" font-size="8" text-anchor="middle" font-family="Share Tech Mono">BEAR ENGULFING</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Bearish Engulfing</h4>
+          <span class="pattern-tag bearish">Reversión Bajista</span>
+          <p>Vela bajista que "engulfe" la vela alcista anterior. Señal de reversión a la baja. Buscarla en zonas de resistencia o supply.</p>
+          <div class="pattern-tip">💡 Confirmar con volumen y zona clave</div>
+        </div>
+      </div>
+
+      <!-- PIN BAR -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <line x1="50" y1="10" x2="50" y2="70" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="38" y="70" width="24" height="16" fill="#00ff88" rx="2"/>
+            <line x1="50" y1="86" x2="50" y2="95" stroke="#00ff88" stroke-width="1.5"/>
+            <text x="50" y="110" fill="#00ff88" font-size="9" text-anchor="middle" font-family="Share Tech Mono">PIN BAR</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Pin Bar</h4>
+          <span class="pattern-tag bullish">Reversión</span>
+          <p>Vela con mecha muy larga y cuerpo pequeño. El precio fue "pinchado" y rechazado. Puede ser bullish o bearish según la mecha.</p>
+          <div class="pattern-tip">💡 Cuanto más larga la mecha, más fuerte el rechazo</div>
+        </div>
+      </div>
+
+      <!-- MARUBOZU -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <rect x="30" y="15" width="40" height="75" fill="#00ff88" rx="2"/>
+            <text x="50" y="110" fill="#00ff88" font-size="9" text-anchor="middle" font-family="Share Tech Mono">MARUBOZU</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Marubozu</h4>
+          <span class="pattern-tag bullish">Impulso Fuerte</span>
+          <p>Vela sin mechas (o casi). El precio abrió en el mínimo y cerró en el máximo (bull) o viceversa (bear). Dominio total de un lado.</p>
+          <div class="pattern-tip">💡 Indica momentum fuerte, esperar retroceso</div>
+        </div>
+      </div>
+
+      <!-- INSIDE BAR -->
+      <div class="pattern-card">
+        <div class="pattern-chart">
+          <svg viewBox="0 0 100 120" class="pat-svg">
+            <rect x="20" y="20" width="30" height="70" fill="#aaa" rx="1"/>
+            <line x1="35" y1="10" x2="35" y2="95" stroke="#aaa" stroke-width="1.5"/>
+            <rect x="50" y="38" width="22" height="34" fill="#00ff88" rx="1"/>
+            <line x1="61" y1="32" x2="61" y2="78" stroke="#00ff88" stroke-width="1.5"/>
+            <text x="50" y="112" fill="#aaa" font-size="9" text-anchor="middle" font-family="Share Tech Mono">INSIDE BAR</text>
+          </svg>
+        </div>
+        <div class="pattern-info">
+          <h4>Inside Bar</h4>
+          <span class="pattern-tag neutral">Compresión</span>
+          <p>Vela que está dentro del rango de la vela anterior. Indica consolidación y posible explosión de precio. Esperar el breakout.</p>
+          <div class="pattern-tip">💡 Más poderosa en tendencia establecida</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ESTRUCTURA DE MERCADO -->
+<section id="estructura" class="section dark-section">
+  <div class="container">
+    <div class="section-label">04 — ESTRUCTURA</div>
+    <h2 class="section-title">Estructura de <span class="accent">Mercado</span></h2>
+    <p class="section-desc">El precio no se mueve al azar. Sigue una estructura de máximos y mínimos que nos dice la dirección del mercado. Entender esto es la base de todo.</p>
+
+    <div class="structure-grid">
+
+      <div class="structure-card">
+        <h3 class="sc-title green">📈 Tendencia Alcista (Uptrend)</h3>
+        <div class="structure-chart">
+          <svg viewBox="0 0 400 200" class="struct-svg">
+            <!-- Grid -->
+            <line x1="0" y1="50" x2="400" y2="50" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="150" x2="400" y2="150" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- Price path -->
+            <path d="M20,170 L70,130 L100,150 L160,100 L190,120 L250,70 L280,90 L340,45 L380,55" fill="none" stroke="#00ff88" stroke-width="2.5"/>
+            <!-- Swings -->
+            <circle cx="20" cy="170" r="4" fill="#00ff88"/>
+            <circle cx="70" cy="130" r="4" fill="#00ff88" opacity="0.5"/>
+            <circle cx="100" cy="150" r="4" fill="#ff3355"/>
+            <circle cx="160" cy="100" r="4" fill="#00ff88" opacity="0.5"/>
+            <circle cx="190" cy="120" r="4" fill="#ff3355"/>
+            <circle cx="250" cy="70" r="4" fill="#00ff88" opacity="0.5"/>
+            <circle cx="280" cy="90" r="4" fill="#ff3355"/>
+            <circle cx="340" cy="45" r="4" fill="#00ff88"/>
+            <!-- Labels HH HL -->
+            <text x="55" y="120" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HH</text>
+            <text x="90" y="165" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HL</text>
+            <text x="148" y="90" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HH</text>
+            <text x="178" y="135" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HL</text>
+            <text x="238" y="62" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HH</text>
+            <text x="268" y="105" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HL</text>
+            <text x="328" y="38" fill="#00ff88" font-size="11" font-family="Share Tech Mono">HH</text>
+          </svg>
+        </div>
+        <div class="structure-legend">
+          <span class="legend-item"><span class="green">HH</span> Higher High — Máximo más alto</span>
+          <span class="legend-item"><span class="green">HL</span> Higher Low — Mínimo más alto</span>
+        </div>
+      </div>
+
+      <div class="structure-card">
+        <h3 class="sc-title red">📉 Tendencia Bajista (Downtrend)</h3>
+        <div class="structure-chart">
+          <svg viewBox="0 0 400 200" class="struct-svg">
+            <line x1="0" y1="50" x2="400" y2="50" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="150" x2="400" y2="150" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+            <path d="M20,30 L70,70 L100,50 L160,100 L190,80 L250,130 L280,110 L340,155 L380,145" fill="none" stroke="#ff3355" stroke-width="2.5"/>
+            <circle cx="20" cy="30" r="4" fill="#ff3355"/>
+            <circle cx="70" cy="70" r="4" fill="#ff3355" opacity="0.5"/>
+            <circle cx="100" cy="50" r="4" fill="#00ff88"/>
+            <circle cx="160" cy="100" r="4" fill="#ff3355" opacity="0.5"/>
+            <circle cx="190" cy="80" r="4" fill="#00ff88"/>
+            <circle cx="250" cy="130" r="4" fill="#ff3355" opacity="0.5"/>
+            <circle cx="280" cy="110" r="4" fill="#00ff88"/>
+            <circle cx="340" cy="155" r="4" fill="#ff3355"/>
+            <text x="55" y="85" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LL</text>
+            <text x="88" y="44" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LH</text>
+            <text x="148" y="115" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LL</text>
+            <text x="177" y="74" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LH</text>
+            <text x="238" y="145" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LL</text>
+            <text x="268" y="104" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LH</text>
+            <text x="328" y="170" fill="#ff3355" font-size="11" font-family="Share Tech Mono">LL</text>
+          </svg>
+        </div>
+        <div class="structure-legend">
+          <span class="legend-item"><span class="red">LL</span> Lower Low — Mínimo más bajo</span>
+          <span class="legend-item"><span class="red">LH</span> Lower High — Máximo más bajo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Soporte y Resistencia -->
+    <div class="sr-section">
+      <h3 class="sub-title">Soporte & Resistencia</h3>
+      <div class="sr-grid">
+        <div class="sr-card">
+          <div class="sr-chart">
+            <svg viewBox="0 0 300 180" class="sr-svg">
+              <!-- Resistencia -->
+              <line x1="10" y1="50" x2="290" y2="50" stroke="#ff3355" stroke-width="1.5" stroke-dasharray="6,3"/>
+              <text x="15" y="44" fill="#ff3355" font-size="11" font-family="Share Tech Mono">RESISTENCIA</text>
+              <!-- Soporte -->
+              <line x1="10" y1="140" x2="290" y2="140" stroke="#00ff88" stroke-width="1.5" stroke-dasharray="6,3"/>
+              <text x="15" y="160" fill="#00ff88" font-size="11" font-family="Share Tech Mono">SOPORTE</text>
+              <!-- Price bouncing -->
+              <path d="M20,140 L50,100 L80,140 L120,90 L150,140 L190,100 L220,50 L250,50 L280,80" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+              <!-- Candles at support -->
+              <rect x="72" y="124" width="12" height="16" fill="#00ff88" rx="1"/>
+              <line x1="78" y1="118" x2="78" y2="144" stroke="#00ff88" stroke-width="1"/>
+              <rect x="142" y="124" width="12" height="16" fill="#00ff88" rx="1"/>
+              <line x1="148" y1="118" x2="148" y2="145" stroke="#00ff88" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="sr-info">
+            <h4>Soporte (Support)</h4>
+            <p>Zona donde el precio ha rebotado al alza múltiples veces. Los compradores defienden ese nivel. Buscar <span class="green">longs</span> aquí.</p>
+          </div>
+        </div>
+        <div class="sr-card">
+          <div class="sr-info">
+            <h4>Resistencia (Resistance)</h4>
+            <p>Zona donde el precio ha sido rechazado a la baja múltiples veces. Los vendedores defienden ese nivel. Buscar <span class="red">shorts</span> aquí.</p>
+          </div>
+          <div class="sr-info">
+            <h4>Role Reversal</h4>
+            <p>Cuando un soporte roto se convierte en resistencia y viceversa. Uno de los conceptos más poderosos del análisis técnico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMC: BOS / ChoCH -->
+<section id="smc" class="section">
+  <div class="container">
+    <div class="section-label">05 — SMART MONEY</div>
+    <h2 class="section-title">BOS & <span class="accent">ChoCH</span></h2>
+    <p class="section-desc">El concepto de Smart Money Concepts (SMC) analiza cómo las instituciones y "dinero inteligente" mueven el mercado. BOS y ChoCH son sus señales más importantes.</p>
+
+    <div class="smc-cards">
+
+      <div class="smc-card">
+        <div class="smc-badge green">BOS</div>
+        <h3>Break of Structure</h3>
+        <h4>Ruptura de Estructura</h4>
+        <div class="smc-chart">
+          <svg viewBox="0 0 380 220" class="smc-svg">
+            <!-- Background zones -->
+            <rect x="0" y="0" width="380" height="220" fill="transparent"/>
+            <!-- Grid -->
+            <line x1="0" y1="55" x2="380" y2="55" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="0" y1="110" x2="380" y2="110" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="0" y1="165" x2="380" y2="165" stroke="#1a2a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <!-- Previous HH line -->
+            <line x1="150" y1="80" x2="380" y2="80" stroke="#00ff88" stroke-width="1" stroke-dasharray="5,3" opacity="0.6"/>
+            <text x="155" y="75" fill="#00ff88" font-size="10" font-family="Share Tech Mono" opacity="0.8">Previous HH</text>
+            <!-- Price path -->
+            <path d="M20,180 L80,130 L110,150 L175,80 L200,100 L270,40 L300,60" fill="none" stroke="#00ff88" stroke-width="2"/>
+            <!-- BOS arrow at 175 -->
+            <line x1="175" y1="80" x2="175" y2="40" stroke="#00ff88" stroke-width="2" stroke-dasharray="3,2"/>
+            <!-- Candles -->
+            <rect x="15" y="162" width="14" height="18" fill="#00ff88" rx="1"/>
+            <line x1="22" y1="156" x2="22" y2="184" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="75" y="118" width="14" height="22" fill="#00ff88" rx="1"/>
+            <line x1="82" y1="112" x2="82" y2="145" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="105" y="136" width="14" height="20" fill="#ff3355" rx="1"/>
+            <line x1="112" y1="130" x2="112" y2="160" stroke="#ff3355" stroke-width="1.5"/>
+            <rect x="165" y="60" width="18" height="26" fill="#00ff88" rx="1"/>
+            <line x1="174" y1="54" x2="174" y2="92" stroke="#00ff88" stroke-width="1.5"/>
+            <!-- BOS Label -->
+            <rect x="195" y="55" width="60" height="24" fill="#00ff8822" stroke="#00ff88" stroke-width="1.5" rx="4"/>
+            <text x="225" y="71" fill="#00ff88" font-size="13" font-family="Orbitron" font-weight="700" text-anchor="middle">BOS</text>
+            <line x1="183" y1="67" x2="195" y2="67" stroke="#00ff88" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <!-- Labels -->
+            <text x="25" y="205" fill="#888" font-size="10" font-family="Share Tech Mono">HL</text>
+            <text x="78" y="112" fill="#00ff88" font-size="10" font-family="Share Tech Mono">HH</text>
+            <text x="108" y="128" fill="#888" font-size="10" font-family="Share Tech Mono">HL</text>
+            <text x="168" y="52" fill="#00ff88" font-size="10" font-family="Share Tech Mono">HH</text>
+          </svg>
+        </div>
+        <div class="smc-desc">
+          <p>El <strong>BOS (Break of Structure)</strong> ocurre cuando el precio rompe y cierra más allá de un swing high o swing low previo, <strong>confirmando la continuación</strong> de la tendencia actual.</p>
+          <ul class="smc-list">
+            <li>🟢 <strong>BOS Alcista:</strong> Precio rompe el HH anterior → continúa uptrend</li>
+            <li>🔴 <strong>BOS Bajista:</strong> Precio rompe el LL anterior → continúa downtrend</li>
+            <li>✅ Se usa para confirmar el bias del mercado</li>
+            <li>✅ Señal de continuación, NO de reversión</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="smc-card">
+        <div class="smc-badge orange">ChoCH</div>
+        <h3>Change of Character</h3>
+        <h4>Cambio de Carácter</h4>
+        <div class="smc-chart">
+          <svg viewBox="0 0 380 220" class="smc-svg">
+            <line x1="0" y1="55" x2="380" y2="55" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="0" y1="110" x2="380" y2="110" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="0" y1="165" x2="380" y2="165" stroke="#2a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+            <!-- Previous HL line -->
+            <line x1="150" y1="145" x2="380" y2="145" stroke="#ff3355" stroke-width="1" stroke-dasharray="5,3" opacity="0.6"/>
+            <text x="155" y="160" fill="#ff3355" font-size="10" font-family="Share Tech Mono" opacity="0.8">Previous HL</text>
+            <!-- Uptrend then reversal -->
+            <path d="M20,185 L70,140 L100,158 L155,108 L185,125 L230,145 L260,120 L310,165 L350,180" fill="none" stroke="#ff3355" stroke-width="2"/>
+            <!-- Candles -->
+            <rect x="15" y="170" width="14" height="18" fill="#00ff88" rx="1"/>
+            <line x1="22" y1="164" x2="22" y2="190" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="65" y="126" width="14" height="22" fill="#00ff88" rx="1"/>
+            <line x1="72" y1="120" x2="72" y2="148" stroke="#00ff88" stroke-width="1.5"/>
+            <rect x="95" y="144" width="14" height="18" fill="#ff3355" rx="1"/>
+            <line x1="102" y1="138" x2="102" y2="165" stroke="#ff3355" stroke-width="1.5"/>
+            <rect x="150" y="93" width="14" height="22" fill="#ff3355" rx="1"/>
+            <line x1="157" y1="87" x2="157" y2="116" stroke="#ff3355" stroke-width="1.5"/>
+            <rect x="225" y="130" width="14" height="22" fill="#ff3355" rx="1"/>
+            <line x1="232" y1="124" x2="232" y2="152" stroke="#ff3355" stroke-width="1.5"/>
+            <!-- ChoCH Label -->
+            <rect x="200" y="58" width="72" height="24" fill="#ff6b0022" stroke="#ff6b00" stroke-width="1.5" rx="4"/>
+            <text x="236" y="74" fill="#ff6b00" font-size="11" font-family="Orbitron" font-weight="700" text-anchor="middle">ChoCH</text>
+            <line x1="232" y1="130" x2="236" y2="82" stroke="#ff6b00" stroke-width="1.5" stroke-dasharray="4,2"/>
+          </svg>
+        </div>
+        <div class="smc-desc">
+          <p>El <strong>ChoCH (Change of Character)</strong> señala una <strong>posible reversión</strong> de tendencia. Ocurre cuando el precio rompe en dirección CONTRARIA a la tendencia actual.</p>
+          <ul class="smc-list">
+            <li>🟢 <strong>ChoCH Bullish:</strong> En downtrend, el precio rompe un LH → posible reversión al alza</li>
+            <li>🔴 <strong>ChoCH Bearish:</strong> En uptrend, el precio rompe un HL → posible reversión a la baja</li>
+            <li>⚠️ NO es confirmación, es <strong>alerta de reversión</strong></li>
+            <li>✅ Buscar ChoCH en zonas de liquidez o OB</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Order Blocks & Liquidity -->
+    <div class="ob-section">
+      <h3 class="sub-title">Order Blocks & Liquidez</h3>
+      <div class="ob-grid">
+
+        <div class="ob-card">
+          <div class="ob-icon">🧱</div>
+          <h4>Order Block (OB)</h4>
+          <div class="ob-chart">
+            <svg viewBox="0 0 200 150" class="ob-svg">
+              <!-- Bullish OB -->
+              <rect x="20" y="95" width="35" height="35" fill="#00ff8833" stroke="#00ff88" stroke-width="1.5" rx="2" stroke-dasharray="4,2"/>
+              <text x="37" y="118" fill="#00ff88" font-size="8" text-anchor="middle" font-family="Share Tech Mono">Bull OB</text>
+              <!-- Candles before -->
+              <rect x="20" y="110" width="10" height="20" fill="#ff3355" rx="1"/>
+              <line x1="25" y1="106" x2="25" y2="134" stroke="#ff3355" stroke-width="1"/>
+              <rect x="35" y="112" width="10" height="18" fill="#ff3355" rx="1"/>
+              <line x1="40" y1="108" x2="40" y2="134" stroke="#ff3355" stroke-width="1"/>
+              <!-- Break up -->
+              <rect x="60" y="80" width="12" height="30" fill="#00ff88" rx="1"/>
+              <line x1="66" y1="74" x2="66" y2="114" stroke="#00ff88" stroke-width="1.5"/>
+              <rect x="78" y="55" width="12" height="32" fill="#00ff88" rx="1"/>
+              <line x1="84" y1="49" x2="84" y2="91" stroke="#00ff88" stroke-width="1.5"/>
+              <!-- Retest -->
+              <rect x="96" y="90" width="12" height="22" fill="#ff3355" rx="1"/>
+              <line x1="102" y1="84" x2="102" y2="116" stroke="#ff3355" stroke-width="1.5"/>
+              <!-- Bounce -->
+              <rect x="114" y="64" width="12" height="30" fill="#00ff88" rx="1"/>
+              <line x1="120" y1="58" x2="120" y2="98" stroke="#00ff88" stroke-width="1.5"/>
+              <rect x="132" y="40" width="12" height="28" fill="#00ff88" rx="1"/>
+              <line x1="138" y1="34" x2="138" y2="72" stroke="#00ff88" stroke-width="1.5"/>
+              <!-- Arrow retest -->
+              <path d="M102,116 C102,130 55,130 45,120" fill="none" stroke="#ffd700" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrowGold)"/>
+              <text x="60" y="145" fill="#ffd700" font-size="8" font-family="Share Tech Mono">Retest OB</text>
+            </svg>
+          </div>
+          <p>Zona donde las instituciones colocaron grandes órdenes. El precio suele <strong>volver a testearla</strong> antes de continuar. Son las mejores zonas de entrada.</p>
+        </div>
+
+        <div class="ob-card">
+          <div class="ob-icon">💧</div>
+          <h4>Liquidez (Liquidity)</h4>
+          <div class="ob-chart">
+            <svg viewBox="0 0 200 150" class="ob-svg">
+              <!-- Equal highs line -->
+              <line x1="20" y1="40" x2="180" y2="40" stroke="#ffd700" stroke-width="1" stroke-dasharray="4,3"/>
+              <text x="25" y="34" fill="#ffd700" font-size="8" font-family="Share Tech Mono">BSL (Buy Side Liq.)</text>
+              <!-- Equal lows -->
+              <line x1="20" y1="120" x2="180" y2="120" stroke="#00aaff" stroke-width="1" stroke-dasharray="4,3"/>
+              <text x="25" y="135" fill="#00aaff" font-size="8" font-family="Share Tech Mono">SSL (Sell Side Liq.)</text>
+              <!-- Candles touching highs twice -->
+              <rect x="40" y="28" width="10" height="30" fill="#00ff88" rx="1"/>
+              <line x1="45" y1="22" x2="45" y2="62" stroke="#00ff88" stroke-width="1"/>
+              <rect x="80" y="58" width="10" height="22" fill="#ff3355" rx="1"/>
+              <line x1="85" y1="52" x2="85" y2="84" stroke="#ff3355" stroke-width="1"/>
+              <rect x="100" y="28" width="10" height="30" fill="#00ff88" rx="1"/>
+              <line x1="105" y1="22" x2="105" y2="62" stroke="#00ff88" stroke-width="1"/>
+              <!-- Sweep -->
+              <rect x="140" y="18" width="12" height="28" fill="#ff3355" rx="1"/>
+              <line x1="146" y1="10" x2="146" y2="50" stroke="#ff3355" stroke-width="2"/>
+              <!-- Sweep label -->
+              <text x="155" y="18" fill="#ff3355" font-size="8" font-family="Share Tech Mono">SWEEP</text>
+            </svg>
+          </div>
+          <p>Zonas donde hay acumulación de <strong>stop losses</strong> o pending orders. El precio tiende a ir a "cazar" esa liquidez (BSL / SSL) antes de revertir.</p>
+        </div>
+
+        <div class="ob-card">
+          <div class="ob-icon">⚖️</div>
+          <h4>FVG — Fair Value Gap</h4>
+          <div class="ob-chart">
+            <svg viewBox="0 0 200 150" class="ob-svg">
+              <!-- Three candles FVG -->
+              <rect x="40" y="80" width="14" height="30" fill="#00ff88" rx="1"/>
+              <line x1="47" y1="74" x2="47" y2="114" stroke="#00ff88" stroke-width="1.5"/>
+              <!-- Big impulse -->
+              <rect x="60" y="30" width="16" height="65" fill="#00ff88" rx="1"/>
+              <line x1="68" y1="22" x2="68" y2="100" stroke="#00ff88" stroke-width="2"/>
+              <!-- Third candle -->
+              <rect x="82" y="50" width="14" height="28" fill="#ff3355" rx="1"/>
+              <line x1="89" y1="44" x2="89" y2="82" stroke="#ff3355" stroke-width="1.5"/>
+              <!-- FVG zone -->
+              <rect x="60" y="78" width="36" height="22" fill="#ffd70022" stroke="#ffd700" stroke-width="1" stroke-dasharray="3,2" rx="2"/>
+              <text x="78" y="92" fill="#ffd700" font-size="7" text-anchor="middle" font-family="Share Tech Mono">FVG</text>
+              <!-- Price retest FVG -->
+              <rect x="110" y="65" width="12" height="28" fill="#00ff88" rx="1"/>
+              <line x1="116" y1="59" x2="116" y2="97" stroke="#00ff88" stroke-width="1.5"/>
+              <rect x="128" y="75" width="12" height="25" fill="#ff3355" rx="1"/>
+              <line x1="134" y1="69" x2="134" y2="104" stroke="#ff3355" stroke-width="1.5"/>
+              <text x="116" y="115" fill="#ffd700" font-size="7" font-family="Share Tech Mono">Retest FVG</text>
+            </svg>
+          </div>
+          <p>Desequilibrio del precio: gap dejado por un movimiento impulsivo entre 3 velas. El precio tiende a <strong>volver a rellenarlo</strong> antes de continuar.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Conceptos adicionales SMC -->
+    <div class="smc-extra">
+      <h3 class="sub-title">Conceptos SMC Adicionales</h3>
+      <div class="extra-grid">
+        <div class="extra-item">
+          <span class="extra-icon">🏹</span>
+          <h4>Sweep de Liquidez</h4>
+          <p>El precio "barre" los stops por encima/abajo de un swing y revierte. Las instituciones usan los stops de los retail traders como liquidez para abrir sus posiciones.</p>
+        </div>
+        <div class="extra-item">
+          <span class="extra-icon">📦</span>
+          <h4>Premium & Discount</h4>
+          <p>El rango entre un swing high y swing low se divide al 50% (equilibrium). Por encima es "premium" (caro, vender). Por debajo es "discount" (barato, comprar).</p>
+        </div>
+        <div class="extra-item">
+          <span class="extra-icon">🎯</span>
+          <h4>POI (Point of Interest)</h4>
+          <p>Zona de interés donde se espera que el precio reaccione. Puede ser un OB, FVG, zona de liquidez o nivel de soporte/resistencia confluente.</p>
+        </div>
+        <div class="extra-item">
+          <span class="extra-icon">🔄</span>
+          <h4>Mitigation Block</h4>
+          <p>Order block que ya fue mitigado (precio lo tocó y reaccionó). Pierde fuerza tras ser testeado pero puede actuar nuevamente si hay confluencia.</p>
+        </div>
+        <div class="extra-item">
+          <span class="extra-icon">📊</span>
+          <h4>CISD</h4>
+          <p>Change in State of Delivery — Cambio en el estado de entrega. Vela que invierte el flujo del mercado, similar a ChoCH pero a nivel micro.</p>
+        </div>
+        <div class="extra-item">
+          <span class="extra-icon">🌊</span>
+          <h4>Inducement (IDM)</h4>
+          <p>Mínimo o máximo creado por el mercado para atraer traders al lado equivocado antes de una reversión. Trampa de liquidez deliberada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GESTIÓN DE RIESGO -->
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-label">06 — GESTIÓN</div>
+    <h2 class="section-title">Gestión de <span class="accent">Riesgo</span></h2>
+    <p class="section-desc">El trader profesional no se define por cuánto gana, sino por cuánto protege. La gestión de riesgo es la diferencia entre sobrevivir y quebrar.</p>
+
+    <div class="risk-grid">
+      <div class="risk-card highlight">
+        <h4>Regla del 1-2%</h4>
+        <p>Nunca arriesgues más del <strong>1-2%</strong> de tu capital en una sola operación. Con una cuenta de $1,000 → riesgo máximo $20 por trade.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Risk/Reward (RR)</h4>
+        <p>La relación entre lo que arriesgas y lo que puedes ganar. Mínimo buscar <strong>1:2 RR</strong> (si arriesgo $10, gano $20). Así puedes ganar aunque pierdas 40% de tus trades.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Stop Loss</h4>
+        <p>Orden que cierra automáticamente tu trade si el precio va en tu contra. Colócalo <strong>detrás de una zona clave</strong> (OB, swing point). Nunca operes sin SL.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Take Profit</h4>
+        <p>Nivel objetivo donde cierras la operación con ganancia. Puede ser parcial (50% en TP1) y mover SL a breakeven para proteger el resto.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Tamaño de Posición</h4>
+        <p>Fórmula: <code>Lotes = (Capital × %Riesgo) / (SL en pips × Valor del pip)</code>. Ajusta siempre el lote según donde pongas el stop, no al revés.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Breakeven</h4>
+        <p>Mover el Stop Loss al precio de entrada cuando el trade va a tu favor. Elimina el riesgo y convierte la operación en "gratis". Hacerlo cuando el precio alcanza el RR 1:1.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSARIO -->
+<section id="glosario" class="section">
+  <div class="container">
+    <div class="section-label">07 — GLOSARIO</div>
+    <h2 class="section-title">Habla como <span class="accent">Trader Pro</span></h2>
+    <p class="section-desc">El vocabulario esencial que todo trader debe dominar. Úsalo con confianza en tus videos y análisis.</p>
+
+    <div class="glossary-filter">
+      <button class="filter-btn active" onclick="filterGlossary('all')">Todos</button>
+      <button class="filter-btn" onclick="filterGlossary('basico')">Básico</button>
+      <button class="filter-btn" onclick="filterGlossary('smc')">SMC</button>
+      <button class="filter-btn" onclick="filterGlossary('gestion')">Gestión</button>
+      <button class="filter-btn" onclick="filterGlossary('orden')">Órdenes</button>
+    </div>
+
+    <div class="glossary-grid" id="glossaryGrid">
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Bull / Bullish</span><span class="glos-def">Alcista. Expectativa de que el precio sube.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Bear / Bearish</span><span class="glos-def">Bajista. Expectativa de que el precio baja.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Bias</span><span class="glos-def">Dirección preferida del mercado según el análisis.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Swing High / Low</span><span class="glos-def">Máximo o mínimo relativo significativo en el gráfico.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Breakout</span><span class="glos-def">Cuando el precio rompe un nivel de soporte o resistencia.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Pullback / Retroceso</span><span class="glos-def">Corrección temporal en contra de la tendencia antes de continuar.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Consolidación</span><span class="glos-def">Rango lateral donde el precio se "descansa" antes de moverse.</span></div>
+      <div class="glos-item" data-cat="basico"><span class="glos-term">Momentum</span><span class="glos-def">Fuerza e intensidad con la que el precio se mueve en una dirección.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">BOS</span><span class="glos-def">Break of Structure — Ruptura de estructura que confirma tendencia.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">ChoCH</span><span class="glos-def">Change of Character — Señal de posible cambio de tendencia.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">Order Block</span><span class="glos-def">Zona institucional donde se colocaron grandes órdenes.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">FVG</span><span class="glos-def">Fair Value Gap — Desequilibrio de precio entre 3 velas.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">Liquidity</span><span class="glos-def">Pools de stop losses que el precio tiende a "barrer".</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">BSL / SSL</span><span class="glos-def">Buy Side Liquidity / Sell Side Liquidity.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">OTE</span><span class="glos-def">Optimal Trade Entry — Entrada óptima, zona 61.8-79% de Fibonacci.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">PDL / PDH</span><span class="glos-def">Previous Day Low / High — Mínimo/Máximo del día anterior.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">IDM</span><span class="glos-def">Inducement — Trampa de liquidez antes de la dirección real.</span></div>
+      <div class="glos-item" data-cat="smc"><span class="glos-term">MSS</span><span class="glos-def">Market Structure Shift — Similar a ChoCH, cambio de estructura.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">SL (Stop Loss)</span><span class="glos-def">Orden de pérdida máxima aceptada.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">TP (Take Profit)</span><span class="glos-def">Objetivo de ganancias donde cierra la operación.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">RR (Risk/Reward)</span><span class="glos-def">Relación entre el riesgo y el beneficio potencial.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">Breakeven</span><span class="glos-def">Mover SL al precio de entrada para eliminar el riesgo.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">Drawdown</span><span class="glos-def">Pérdida máxima desde un pico hasta un valle de la cuenta.</span></div>
+      <div class="glos-item" data-cat="gestion"><span class="glos-term">Win Rate</span><span class="glos-def">Porcentaje de operaciones ganadoras sobre el total.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Market Order</span><span class="glos-def">Orden al precio actual de mercado, ejecución inmediata.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Limit Order</span><span class="glos-def">Orden pendiente en un precio específico mejor al actual.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Long</span><span class="glos-def">Posición de compra, esperas que el precio suba.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Short</span><span class="glos-def">Posición de venta, esperas que el precio baje.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Entry</span><span class="glos-def">Precio al que entras a la operación.</span></div>
+      <div class="glos-item" data-cat="orden"><span class="glos-term">Pip</span><span class="glos-def">Mínima unidad de movimiento en Forex (4to decimal).</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-label">08 — CHECKLIST</div>
+    <h2 class="section-title">Checklist del <span class="accent">Trader</span></h2>
+    <p class="section-desc">Antes de entrar a cualquier operación, revisa estos puntos. La disciplina es lo que separa a los traders rentables del resto.</p>
+    <div class="checklist">
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>1. Analicé el Bias en el TF mayor (4H / Daily)</strong>
+          <span>¿El mercado es alcista o bajista en el marco mayor?</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>2. Identifiqué la estructura del mercado</strong>
+          <span>HH/HL (uptrend) o LH/LL (downtrend). BOS confirmado.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>3. Localicé la zona de entrada (POI)</strong>
+          <span>Order Block, FVG, Soporte/Resistencia clave, zona de liquidez.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>4. Confirmé con TF menor (15M / 5M)</strong>
+          <span>BOS, ChoCH o patrón de velas en la zona de entrada.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>5. Definí Stop Loss en zona lógica</strong>
+          <span>Detrás del OB, swing point o zona de invalidación.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>6. El RR es mínimo 1:2</strong>
+          <span>El take profit es al menos el doble de mi stop loss.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>7. El riesgo no supera el 1-2% de mi cuenta</strong>
+          <span>Calculé el tamaño de posición según el riesgo definido.</span>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box">✓</div>
+        <div class="check-text">
+          <strong>8. No hay noticias de alto impacto</strong>
+          <span>Revisé el calendario económico (ForexFactory, Investing.com).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">TRADER<span class="accent">PRO</span></span>
+    </div>
+    <p class="footer-disc">⚠️ Esta guía es únicamente educativa. El trading implica riesgo de pérdida de capital. Nunca inviertas más de lo que puedes permitirte perder.</p>
+    <p class="footer-copy">© 2024 TraderPro Guide · Hecho para creadores de contenido de trading</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
